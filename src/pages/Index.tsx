@@ -201,6 +201,56 @@ export default function Index() {
             </div>
           </div>
 
+          {/* Table of Contents */}
+          <div
+            className="border mb-10 overflow-hidden"
+            style={{ borderColor: "var(--hunt-border)", background: "white" }}
+          >
+            <div
+              className="px-6 py-4 border-b flex items-center gap-3"
+              style={{ borderColor: "var(--hunt-border)", background: "var(--hunt-cream)" }}
+            >
+              <Icon name="List" size={14} style={{ color: "var(--hunt-gold)" }} />
+              <span className="font-mono text-xs uppercase tracking-widest" style={{ color: "var(--hunt-muted)" }}>
+                Содержание
+              </span>
+            </div>
+            <div className="divide-y" style={{ borderColor: "var(--hunt-border)" }}>
+              {[
+                { num: "I", title: "История развития охотничьих ружей и их эволюция", id: "history", sub: "Фитильные аркебузы · Кремнёвый замок · Унитарный патрон · Российская оружейная школа" },
+                { num: "II", title: "Применение в охотничьей практике и методы", id: "methods", sub: "Сравнительная таблица ружей · Загонная охота · Засидка · Ходовая охота · Охота на птицу" },
+                { num: "III", title: "Правила безопасности и нормативно-правовая база", id: "safety", sub: "150-ФЗ · 209-ФЗ · Требования к охотнику · Правила безопасного обращения" },
+                { num: "IV", title: "Влияние охоты на экологический баланс", id: "ecology", sub: "Позитивное и негативное влияние · Динамика численности видов · Браконьерство" },
+                { num: "V", title: "Экономический аспект охотничьей деятельности", id: "economy", sub: "Ключевые показатели · Таблица по регионам · Производство · Туризм · Экипировка" },
+              ].map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollTo(item.id)}
+                  className="w-full text-left flex items-start gap-5 px-6 py-4 transition-colors hover:bg-opacity-50"
+                  style={{ background: "transparent" }}
+                  onMouseEnter={e => (e.currentTarget.style.background = "var(--hunt-cream)")}
+                  onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
+                >
+                  <span
+                    className="font-mono text-xs px-2 py-0.5 shrink-0 mt-0.5"
+                    style={{ background: "var(--hunt-dark)", color: "var(--hunt-gold)" }}
+                  >
+                    {item.num}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-cormorant text-lg font-semibold leading-snug" style={{ color: "var(--hunt-dark)" }}>
+                      {item.title}
+                    </div>
+                    <div className="text-xs mt-0.5 truncate" style={{ color: "var(--hunt-muted)" }}>
+                      {item.sub}
+                    </div>
+                  </div>
+                  <Icon name="ChevronRight" size={14} className="mt-1 shrink-0" style={{ color: "var(--hunt-border)" }} />
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Section I: History */}
           <section id="history" className="mb-12 scroll-mt-6">
             <SectionHeader num="I" title="История развития охотничьих ружей и их эволюция" />
