@@ -73,7 +73,7 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen font-ibm" style={{ background: "var(--hunt-paper)", color: "var(--hunt-text)" }}>
+    <div className="min-h-screen" style={{ background: "var(--hunt-paper)", color: "var(--hunt-text)" }}>
 
       {/* Title Page */}
       <div

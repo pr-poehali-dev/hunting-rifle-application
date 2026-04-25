@@ -108,5 +108,19 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    line-height: 1.2;
+  }
+
+  p,
+  li,
+  td,
+  th,
+  span,
+  div {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    line-height: 1.2;
   }
 }
