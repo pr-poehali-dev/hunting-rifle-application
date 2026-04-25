@@ -1,0 +1,3 @@
+# hunting-rifle-application
+
+Initial repository setup for pr-poehali-dev/hunting-rifle-application
