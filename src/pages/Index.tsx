@@ -366,6 +366,112 @@ export default function Index() {
             </div>
           </section>
 
+          {/* Goals, Tasks & Relevance */}
+          <section className="mb-12">
+            <div
+              className="border p-8 md:p-12"
+              style={{ borderColor: "var(--hunt-border)", background: "white" }}
+            >
+              <div className="flex items-center gap-3 mb-8">
+                <div className="h-px w-8" style={{ background: "var(--hunt-gold)" }} />
+                <span className="font-mono text-xs tracking-widest uppercase" style={{ color: "var(--hunt-gold)" }}>
+                  Цели, задачи и актуальность
+                </span>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-10 mb-10">
+                {/* Цели */}
+                <div>
+                  <h3 className="font-cormorant text-2xl font-semibold mb-5" style={{ color: "var(--hunt-dark)" }}>
+                    Цели исследования
+                  </h3>
+                  <div className="space-y-3">
+                    {[
+                      { n: "1", text: "Систематизировать сведения об охотничьих ружьях России — от исторических истоков до современных образцов." },
+                      { n: "2", text: "Проанализировать действующую нормативно-правовую базу в сфере оборота охотничьего оружия." },
+                      { n: "3", text: "Оценить экологическое воздействие охоты на популяции диких животных и биоразнообразие." },
+                      { n: "4", text: "Определить экономическую роль охотничьей отрасли в разрезе регионов Российской Федерации." },
+                    ].map((item) => (
+                      <div key={item.n} className="flex items-start gap-4">
+                        <span
+                          className="font-mono text-xs px-2 py-0.5 shrink-0 mt-0.5"
+                          style={{ background: "var(--hunt-dark)", color: "var(--hunt-gold)" }}
+                        >
+                          {item.n}
+                        </span>
+                        <p className="text-sm leading-6" style={{ color: "var(--hunt-text)" }}>{item.text}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Задачи */}
+                <div>
+                  <h3 className="font-cormorant text-2xl font-semibold mb-5" style={{ color: "var(--hunt-dark)" }}>
+                    Задачи исследования
+                  </h3>
+                  <div className="space-y-2">
+                    {[
+                      "Изучить историю развития охотничьего оружия в России и мире",
+                      "Составить сравнительную характеристику основных типов ружей по ключевым параметрам",
+                      "Описать практические методы охоты и требования к оружию для каждого из них",
+                      "Проанализировать федеральное законодательство и требования к охотнику",
+                      "Выявить связь между охотой и динамикой численности ключевых видов животных",
+                      "Представить количественные показатели охотничьей отрасли по регионам страны",
+                    ].map((task) => (
+                      <div key={task} className="flex items-start gap-3 text-sm py-2 border-b last:border-b-0" style={{ borderColor: "var(--hunt-border)", color: "var(--hunt-muted)" }}>
+                        <Icon name="ChevronRight" size={13} className="shrink-0 mt-0.5" style={{ color: "var(--hunt-green)" }} />
+                        {task}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Актуальность */}
+              <div
+                className="border-t pt-8"
+                style={{ borderColor: "var(--hunt-border)" }}
+              >
+                <h3 className="font-cormorant text-2xl font-semibold mb-5" style={{ color: "var(--hunt-dark)" }}>
+                  Актуальность
+                </h3>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="space-y-4">
+                    <p className="text-sm leading-7" style={{ color: "var(--hunt-text)" }}>
+                      В последнее десятилетие охотничья отрасль России переживает период существенной
+                      трансформации: ужесточение законодательства, цифровизация системы выдачи разрешений,
+                      рост числа охотников среди городского населения и усиление общественного внимания
+                      к вопросам экологии формируют новый облик охоты как социального явления.
+                    </p>
+                    <p className="text-sm leading-7" style={{ color: "var(--hunt-text)" }}>
+                      По данным Росгвардии, количество зарегистрированного охотничьего оружия в стране
+                      ежегодно растёт на 3–5%, тогда как требования к его хранению, транспортировке и
+                      применению становятся всё более детализированными. В этих условиях дефицит
+                      систематизированной информации ощущается как среди начинающих охотников,
+                      так и среди специалистов смежных отраслей.
+                    </p>
+                  </div>
+                  <div className="space-y-4">
+                    <p className="text-sm leading-7" style={{ color: "var(--hunt-text)" }}>
+                      Отдельную актуальность приобретает экологическое измерение охоты: в условиях
+                      изменения климата и перестройки ареалов обитания видов грамотное управление
+                      охотничьими угодьями становится инструментом сохранения биоразнообразия,
+                      а не угрозой ему. Это требует переосмысления роли охотника как субъекта
+                      природопользования.
+                    </p>
+                    <p className="text-sm leading-7" style={{ color: "var(--hunt-text)" }}>
+                      Наконец, экономический потенциал отрасли — более 89 млрд рублей ежегодного оборота —
+                      остаётся недооценённым на государственном уровне. Настоящий документ призван
+                      восполнить информационный пробел и предоставить актуальную аналитическую базу
+                      для всех участников охотничьей деятельности.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Section I: History */}
           <section id="history" className="mb-12 scroll-mt-6">
             <SectionHeader num="I" title="История развития охотничьих ружей и их эволюция" />
