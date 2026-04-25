@@ -251,6 +251,121 @@ export default function Index() {
             </div>
           </div>
 
+          {/* Introduction */}
+          <section className="mb-12">
+            <div
+              className="border p-8 md:p-12 relative overflow-hidden"
+              style={{ borderColor: "var(--hunt-border)", background: "white", minHeight: "90vh" }}
+            >
+              {/* Декоративный номер страницы */}
+              <div
+                className="absolute bottom-8 right-10 font-cormorant text-8xl font-bold select-none pointer-events-none"
+                style={{ color: "var(--hunt-border)", lineHeight: 1 }}
+              >
+                01
+              </div>
+
+              {/* Заголовок введения */}
+              <div className="mb-10">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="h-px w-8" style={{ background: "var(--hunt-gold)" }} />
+                  <span className="font-mono text-xs tracking-widest uppercase" style={{ color: "var(--hunt-gold)" }}>
+                    Введение
+                  </span>
+                </div>
+                <h2 className="font-cormorant text-3xl md:text-5xl font-bold leading-tight" style={{ color: "var(--hunt-dark)" }}>
+                  Охотничье ружьё в контексте<br />
+                  <span className="italic font-light" style={{ color: "var(--hunt-green-mid)" }}>
+                    культуры и государства
+                  </span>
+                </h2>
+              </div>
+
+              {/* Основной текст: два столбца как в академической статье */}
+              <div className="grid md:grid-cols-2 gap-8 mb-10">
+                <div className="space-y-5">
+                  <p className="text-sm leading-7" style={{ color: "var(--hunt-text)" }}>
+                    Охота — одна из древнейших форм взаимодействия человека с природой, неразрывно связанная с историей
+                    расселения, выживания и культурного становления народов России. На протяжении столетий охотничье
+                    ружьё служило не только орудием добычи пропитания, но и символом социального статуса, предметом
+                    мастерства оружейников и объектом художественного оформления.
+                  </p>
+                  <p className="text-sm leading-7" style={{ color: "var(--hunt-text)" }}>
+                    Сегодня охотничье оружие находится на пересечении нескольких сфер: права и государственного
+                    регулирования, экологии и природоохраны, экономики и туризма, традиционной культуры и
+                    современных технологий. Понимание этого контекста необходимо как практикующим охотникам,
+                    так и специалистам в области охраны природы, законодательства и регионального развития.
+                  </p>
+                  <p className="text-sm leading-7" style={{ color: "var(--hunt-text)" }}>
+                    Настоящий документ подготовлен с целью систематизировать актуальные знания об охотничьих
+                    ружьях России: их историческом развитии, технических характеристиках, правовом статусе,
+                    экологическом и экономическом значении.
+                  </p>
+                </div>
+                <div className="space-y-5">
+                  <p className="text-sm leading-7" style={{ color: "var(--hunt-text)" }}>
+                    В работе используются данные Министерства природных ресурсов и экологии РФ, Росгвардии,
+                    Росстата, а также открытые материалы профессиональных охотничьих объединений и
+                    научных публикаций по охотоведению. Статистика актуализирована по состоянию на I квартал 2026 года.
+                  </p>
+                  <p className="text-sm leading-7" style={{ color: "var(--hunt-text)" }}>
+                    Особое внимание уделено практическому аспекту: сравнительные таблицы типов ружей, требования
+                    к охотнику, региональная экономика отрасли — всё это призвано сделать документ полезным
+                    инструментом для принятия обоснованных решений как на уровне охотника-практика, так и
+                    на уровне управленческих структур.
+                  </p>
+                </div>
+              </div>
+
+              {/* Разделительная линия */}
+              <div className="border-t mb-8" style={{ borderColor: "var(--hunt-border)" }} />
+
+              {/* Цели и задачи */}
+              <div className="grid md:grid-cols-3 gap-6 mb-10">
+                <div>
+                  <div className="font-mono text-xs uppercase tracking-wider mb-3" style={{ color: "var(--hunt-gold)" }}>
+                    Цель документа
+                  </div>
+                  <p className="text-sm leading-6" style={{ color: "var(--hunt-muted)" }}>
+                    Сформировать комплексное и структурированное представление об охотничьем оружии России
+                    для широкого круга заинтересованных лиц.
+                  </p>
+                </div>
+                <div>
+                  <div className="font-mono text-xs uppercase tracking-wider mb-3" style={{ color: "var(--hunt-gold)" }}>
+                    Методология
+                  </div>
+                  <p className="text-sm leading-6" style={{ color: "var(--hunt-muted)" }}>
+                    Анализ нормативных актов, систематизация открытых статистических данных,
+                    сравнительный анализ технических характеристик и отраслевых показателей.
+                  </p>
+                </div>
+                <div>
+                  <div className="font-mono text-xs uppercase tracking-wider mb-3" style={{ color: "var(--hunt-gold)" }}>
+                    Целевая аудитория
+                  </div>
+                  <p className="text-sm leading-6" style={{ color: "var(--hunt-muted)" }}>
+                    Охотники-практики, специалисты охотхозяйств, юристы, экологи, а также студенты
+                    профильных специальностей и все интересующиеся темой.
+                  </p>
+                </div>
+              </div>
+
+              {/* Эпиграф */}
+              <div
+                className="border-l-4 pl-6 py-1"
+                style={{ borderColor: "var(--hunt-green)" }}
+              >
+                <blockquote className="font-cormorant text-xl italic leading-relaxed" style={{ color: "var(--hunt-dark)" }}>
+                  «Охота есть не что иное, как образ войны»
+                </blockquote>
+                <cite className="block mt-2 font-mono text-xs not-italic" style={{ color: "var(--hunt-muted)" }}>
+                  — Ксенофонт, «Киропедия», IV в. до н.э.
+                </cite>
+              </div>
+            </div>
+          </section>
+
           {/* Section I: History */}
           <section id="history" className="mb-12 scroll-mt-6">
             <SectionHeader num="I" title="История развития охотничьих ружей и их эволюция" />
