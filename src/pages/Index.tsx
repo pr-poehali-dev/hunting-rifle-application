@@ -74,6 +74,71 @@ export default function Index() {
 
   return (
     <div className="min-h-screen font-ibm" style={{ background: "var(--hunt-paper)", color: "var(--hunt-text)" }}>
+
+      {/* Title Page */}
+      <div
+        className="relative flex flex-col min-h-screen border-b"
+        style={{ borderColor: "var(--hunt-border)", background: "var(--hunt-dark)", pageBreakAfter: "always" }}
+      >
+        {/* Угловые декоры */}
+        <div className="absolute top-8 left-8 w-16 h-16 border-t-2 border-l-2" style={{ borderColor: "var(--hunt-gold)" }} />
+        <div className="absolute top-8 right-8 w-16 h-16 border-t-2 border-r-2" style={{ borderColor: "var(--hunt-gold)" }} />
+        <div className="absolute bottom-8 left-8 w-16 h-16 border-b-2 border-l-2" style={{ borderColor: "var(--hunt-gold)" }} />
+        <div className="absolute bottom-8 right-8 w-16 h-16 border-b-2 border-r-2" style={{ borderColor: "var(--hunt-gold)" }} />
+
+        {/* Фоновый паттерн */}
+        <div
+          className="absolute inset-0 opacity-5 pointer-events-none"
+          style={{
+            backgroundImage: "repeating-linear-gradient(0deg, var(--hunt-gold) 0, var(--hunt-gold) 1px, transparent 0, transparent 60px), repeating-linear-gradient(90deg, var(--hunt-gold) 0, var(--hunt-gold) 1px, transparent 0, transparent 60px)",
+          }}
+        />
+
+        {/* Верхний блок — организация */}
+        <div className="relative pt-16 px-16 text-center">
+          <div className="font-mono text-xs tracking-widest uppercase mb-1" style={{ color: "rgba(255,255,255,0.4)" }}>
+            Научно-исследовательский проект
+          </div>
+          <div className="h-px mx-auto mt-4" style={{ background: "var(--hunt-gold)", maxWidth: 120, opacity: 0.6 }} />
+        </div>
+
+        {/* Центральный блок — тема */}
+        <div className="relative flex-1 flex flex-col items-center justify-center text-center px-8 md:px-24">
+          <div className="mb-6">
+            <span className="font-mono text-xs tracking-widest uppercase px-4 py-1.5 border" style={{ borderColor: "rgba(201,168,76,0.4)", color: "var(--hunt-gold)" }}>
+              Тема проекта
+            </span>
+          </div>
+          <h1 className="font-cormorant font-bold leading-tight text-white mb-6" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
+            Применение охотничьих ружей<br />
+            <span className="italic font-light" style={{ color: "var(--hunt-gold)" }}>
+              в жизни человека
+            </span>
+          </h1>
+          <div className="h-px mb-8" style={{ background: "var(--hunt-gold)", width: 80, opacity: 0.5 }} />
+          <p className="text-sm max-w-xl leading-relaxed" style={{ color: "rgba(255,255,255,0.45)" }}>
+            Комплексное исследование истории, практики, правового регулирования,<br />
+            экологического и экономического значения охотничьего оружия в России
+          </p>
+        </div>
+
+        {/* Нижний блок — автор */}
+        <div className="relative pb-16 px-16">
+          <div className="h-px mb-8 mx-auto" style={{ background: "rgba(201,168,76,0.25)", maxWidth: 400 }} />
+          <div className="flex flex-col items-center gap-2 text-center">
+            <div className="font-mono text-xs tracking-widest uppercase" style={{ color: "rgba(255,255,255,0.35)" }}>
+              Автор
+            </div>
+            <div className="font-cormorant text-3xl font-semibold text-white tracking-wide">
+              Григорий Иванов
+            </div>
+            <div className="font-mono text-xs mt-1" style={{ color: "rgba(255,255,255,0.35)" }}>
+              Апрель 2026
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Header */}
       <header
         className="border-b"
