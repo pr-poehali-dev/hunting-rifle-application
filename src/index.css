@@ -4,8 +4,19 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 40 20% 97%;
+    --foreground: 30 15% 12%;
+
+    --hunt-dark: #1a2018;
+    --hunt-green: #2d4a22;
+    --hunt-green-mid: #3d6b2e;
+    --hunt-gold: #c9a84c;
+    --hunt-gold-light: #e8c96a;
+    --hunt-cream: #f5f0e8;
+    --hunt-paper: #faf7f2;
+    --hunt-border: #d4c9b0;
+    --hunt-text: #2a2018;
+    --hunt-muted: #7a7060;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
