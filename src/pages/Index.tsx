@@ -935,6 +935,129 @@ export default function Index() {
             </div>
           </section>
 
+          {/* Conclusion */}
+          <section className="mb-12">
+            <div
+              className="border p-8 md:p-12 relative overflow-hidden"
+              style={{ borderColor: "var(--hunt-border)", background: "var(--hunt-dark)" }}
+            >
+              {/* Фоновый паттерн */}
+              <div
+                className="absolute inset-0 opacity-5 pointer-events-none"
+                style={{
+                  backgroundImage: "repeating-linear-gradient(135deg, var(--hunt-gold) 0, var(--hunt-gold) 1px, transparent 0, transparent 40px)",
+                }}
+              />
+              {/* Декоративный номер */}
+              <div
+                className="absolute bottom-6 right-10 font-cormorant font-bold select-none pointer-events-none"
+                style={{ color: "rgba(255,255,255,0.04)", fontSize: "10rem", lineHeight: 1 }}
+              >
+                fin
+              </div>
+
+              <div className="relative">
+                {/* Заголовок */}
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="h-px w-8" style={{ background: "var(--hunt-gold)" }} />
+                  <span className="font-mono text-xs tracking-widest uppercase" style={{ color: "var(--hunt-gold)" }}>
+                    Заключение
+                  </span>
+                </div>
+
+                <h2 className="font-cormorant text-3xl md:text-4xl font-bold text-white leading-tight mb-10">
+                  Охотничье ружьё — не просто<br />
+                  <span className="italic font-light" style={{ color: "var(--hunt-gold)" }}>
+                    инструмент, а часть культуры
+                  </span>
+                </h2>
+
+                {/* Основной текст */}
+                <div className="grid md:grid-cols-2 gap-8 mb-10">
+                  <div className="space-y-5">
+                    <p className="text-sm leading-7" style={{ color: "rgba(255,255,255,0.7)" }}>
+                      Проведённое исследование показало, что охотничье ружьё занимает уникальное место
+                      в российской культуре, истории и экономике. На протяжении столетий оно эволюционировало
+                      от примитивного оружия выживания до высокотехнологичного изделия, отражающего уровень
+                      оружейного мастерства страны. Тульский и Ижевский заводы по праву входят в число
+                      ведущих мировых производителей охотничьего оружия.
+                    </p>
+                    <p className="text-sm leading-7" style={{ color: "rgba(255,255,255,0.7)" }}>
+                      Анализ нормативно-правовой базы подтвердил: российское законодательство создаёт
+                      достаточно полную и последовательную систему регулирования оборота охотничьего оружия.
+                      Вместе с тем правоприменительная практика требует дальнейшего совершенствования —
+                      прежде всего в части противодействия браконьерству и контроля за соблюдением
+                      лимитов добычи.
+                    </p>
+                  </div>
+                  <div className="space-y-5">
+                    <p className="text-sm leading-7" style={{ color: "rgba(255,255,255,0.7)" }}>
+                      Экологическое измерение охоты оказалось неоднозначным: при грамотном управлении
+                      угодьями охота служит действенным инструментом регуляции численности животных
+                      и финансирования природоохранной деятельности. Положительная динамика популяций
+                      лося, кабана и косули в 2015–2025 годах свидетельствует об эффективности
+                      действующей системы охотничьего хозяйства.
+                    </p>
+                    <p className="text-sm leading-7" style={{ color: "rgba(255,255,255,0.7)" }}>
+                      Экономический потенциал отрасли — свыше 89 млрд рублей ежегодного оборота
+                      и более 63 тысяч рабочих мест — подчёркивает её значимость для регионального
+                      развития, особенно в Сибири и на Дальнем Востоке. Охотничий туризм остаётся
+                      перспективным, но недостаточно используемым ресурсом.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Итоговые выводы */}
+                <div
+                  className="border-t pt-8 mb-8"
+                  style={{ borderColor: "rgba(255,255,255,0.1)" }}
+                >
+                  <div className="font-mono text-xs uppercase tracking-wider mb-5" style={{ color: "var(--hunt-gold)" }}>
+                    Основные выводы
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-3">
+                    {[
+                      "Охотничье ружьё прошло 600-летний путь эволюции и остаётся технически совершенным инструментом",
+                      "Российская нормативная база достаточно полна, однако требует последовательного правоприменения",
+                      "Грамотная охота является инструментом сохранения, а не уничтожения биоразнообразия",
+                      "Отрасль формирует более 89 млрд ₽ оборота и обеспечивает десятки тысяч рабочих мест",
+                      "Выбор типа ружья напрямую определяет безопасность и эффективность охоты",
+                      "Охотничий туризм обладает значительным нераскрытым экономическим потенциалом",
+                    ].map((item, i) => (
+                      <div key={item} className="flex items-start gap-3 p-3 border" style={{ borderColor: "rgba(255,255,255,0.08)", background: "rgba(255,255,255,0.04)" }}>
+                        <span className="font-mono text-xs shrink-0 mt-0.5" style={{ color: "var(--hunt-gold)" }}>
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <span className="text-sm leading-5" style={{ color: "rgba(255,255,255,0.65)" }}>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Подпись автора */}
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                  <div
+                    className="border-l-4 pl-5 py-1"
+                    style={{ borderColor: "var(--hunt-gold)" }}
+                  >
+                    <blockquote className="font-cormorant text-lg italic" style={{ color: "rgba(255,255,255,0.7)" }}>
+                      «Природа — не то, что мы получили в наследство от предков.<br />
+                      Это то, что мы взяли в долг у наших детей.»
+                    </blockquote>
+                    <cite className="block mt-2 font-mono text-xs not-italic" style={{ color: "rgba(255,255,255,0.35)" }}>
+                      — Антуан де Сент-Экзюпери
+                    </cite>
+                  </div>
+                  <div className="text-right shrink-0">
+                    <div className="font-mono text-xs mb-1" style={{ color: "rgba(255,255,255,0.35)" }}>Автор проекта</div>
+                    <div className="font-cormorant text-2xl font-semibold text-white">Григорий Иванов</div>
+                    <div className="font-mono text-xs mt-1" style={{ color: "rgba(255,255,255,0.35)" }}>Апрель 2026</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Footer */}
           <footer className="border-t mt-8 pt-6 pb-10" style={{ borderColor: "var(--hunt-border)" }}>
             <div className="flex flex-col md:flex-row justify-between gap-4">
